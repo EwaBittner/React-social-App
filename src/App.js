@@ -10,7 +10,7 @@ import {MyFavouriteDishes} from "./Dishes";
 import Wrapper from "./Wrapper";
 import Users from "./Users";
 import {Form} from "./Form";
-import { Routes, Route, BrowserRouter} from "react-router-dom";
+import { Routes, Route, Link} from "react-router-dom";
 
 const dishes = [
   { id: 1, name: 'Bigos' }, 
@@ -24,12 +24,24 @@ function App() {
       <AppBar position="static">
         <Toolbar>
           <CodeIcon />
-          <Button variant="text" color="inherit">Home</Button>
-          <Button variant="text" color="inherit">About me</Button>
-          <Button variant="text" color="inherit">Game</Button>
-          <Button variant="text" color="inherit">Users</Button>
-          <Button variant="text" color="inherit">Form</Button>
-          <Button variant="text" color="inherit">Contact</Button>
+          <Button variant="text" color="inherit">
+            <Link to="/">Home</Link>
+          </Button>
+          <Button variant="text" color="inherit">
+            <Link to="/about-me">About me</Link>
+          </Button>
+          <Button variant="text" color="inherit">
+            <Link to="/game">Game</Link>
+          </Button>
+          <Button variant="text" color="inherit">
+            <Link to="/users">Users</Link>
+          </Button>
+          <Button variant="text" color="inherit">
+            <Link to="/form">Form</Link>
+          </Button>
+          <Button variant="text" color="inherit">
+            <Link to="/contact">Contact</Link>
+          </Button>
         </Toolbar>
       </AppBar>
 

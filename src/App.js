@@ -3,6 +3,9 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Button from "@material-ui/core/Button";
 import CodeIcon from "@material-ui/icons/Code";
+import { Routes, Route, Link, NavLink} from "react-router-dom";
+
+import './App.css';
 import MyName from "./MyName";
 import {Contact} from "./Contact";
 import Game from "./Game";
@@ -10,7 +13,6 @@ import {MyFavouriteDishes} from "./Dishes";
 import Wrapper from "./Wrapper";
 import Users from "./Users";
 import {Form} from "./Form";
-import { Routes, Route, Link} from "react-router-dom";
 
 const dishes = [
   { id: 1, name: 'Bigos' }, 
@@ -30,10 +32,10 @@ function App() {
           <Button variant="text" color="inherit" component={Link} to="/about-me">
             About me
           </Button>
-          <Button variant="text" color="inherit" component={Link} to="/game">
+          <Button variant="text" color="inherit" component={NavLink} to="/game" activeClassName="active">
             Game
           </Button>
-          <Button variant="text" color="inherit" component={Link} to="/users">
+          <Button variant="text" color="inherit" component={NavLink} to="/users" activeClassName="active">
             Users
           </Button>
           <Button variant="text" color="inherit" component={Link} to="/form">

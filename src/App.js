@@ -24,23 +24,23 @@ function App() {
       <AppBar position="static">
         <Toolbar>
           <CodeIcon />
-          <Button variant="text" color="inherit">
-            <Link to="/">Home</Link>
+          <Button variant="text" color="inherit" component={Link} to="/">
+            Home
           </Button>
-          <Button variant="text" color="inherit">
-            <Link to="/about-me">About me</Link>
+          <Button variant="text" color="inherit" component={Link} to="/about-me">
+            About me
           </Button>
-          <Button variant="text" color="inherit">
-            <Link to="/game">Game</Link>
+          <Button variant="text" color="inherit" component={Link} to="/game">
+            Game
           </Button>
-          <Button variant="text" color="inherit">
-            <Link to="/users">Users</Link>
+          <Button variant="text" color="inherit" component={Link} to="/users">
+            Users
           </Button>
-          <Button variant="text" color="inherit">
-            <Link to="/form">Form</Link>
+          <Button variant="text" color="inherit" component={Link} to="/form">
+            Form
           </Button>
-          <Button variant="text" color="inherit">
-            <Link to="/contact">Contact</Link>
+          <Button variant="text" color="inherit" component={Link} to="/contact">
+            Contact
           </Button>
         </Toolbar>
       </AppBar>

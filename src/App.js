@@ -40,8 +40,8 @@ function App() {
 
           <Route path="/contact" element={<Contact data={{
               tel: '4646345',
-              address: 'Morenevegen 15',
-              email: 'koteczki@tak.no'
+              address: 'Beautiful street 13',
+              email: 'kittens@somewhere.no'
             }} />} >
           </Route>
           

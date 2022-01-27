@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import { UserDetails } from "./UserDetails";
 
 import './App.css';
-// import MyName from "./MyName";
+import MyName from "./MyName";
 import {Contact} from "./Contact";
 import Game from "./Game";
 import {MyFavouriteDishes} from "./Dishes";
@@ -25,13 +25,13 @@ function App() {
       <Wrapper>
         <Routes>
           <Route path="/about-me" element={<MyFavouriteDishes dishes={dishes} />} >
-            {/* <MyName name="Ewa" surname="Bit" /> */}
-            {/* <MyName name="Ewa" /> */}
+            <Route path="/about-me" element={<MyName name="Ewa" surname="Bit"/>} />
+            <Route path="/about-me" element={<MyName name="Ewa"/>} />
           </Route>
 
           <Route path="/game" element={<Game name="Szaszki"/>} />
 
-          <Route exact path="/users" element={<Users />} />
+          <Route path="/users/*" element={<Users />} />
 
           <Route path="/users/:id" component={UserDetails} />
 

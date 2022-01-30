@@ -6,16 +6,21 @@ export class UserDetails extends React.Component {
     }
 
     componentDidMount() {
-        fetch(`https://jasonplaceholder.typicode.com/users/${this.props.match.params.id}`)
+        fetch(`https://jsonplaceholder.typicode.com/users/${this.props.match.params.id}`)
             .then(r => r.json())
             .then(userData => {
                 this.setState({
-                    name: userData.name
+                    name: userData
                 })
-            });
+            })
+        
     }
 
     render() {
-        return <h2>Welcome user id: {this.state.name}!</h2>
+        if (!this.state.data) {
+            return <h2>Uploading data</h2>
+        }
+
+        return <h2>Welcome user id: {this.state.data.name}!</h2>
     }
 }

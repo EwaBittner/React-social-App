@@ -31,7 +31,8 @@ class Users extends React.Component {
             <h2>Users</h2>
             {this.state.users.map(user => (
                 <User 
-                    key={user.id} 
+                    key={user.id}
+                    id={user.id} 
                     name={user.name} 
                     surname={user.surname}
                     companyName={user.company.name} 

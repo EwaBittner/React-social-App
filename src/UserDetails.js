@@ -10,7 +10,7 @@ export class UserDetails extends React.Component {
             .then(r => r.json())
             .then(userData => {
                 this.setState({
-                    name: userData
+                    data: userData
                 })
             })
         
@@ -21,6 +21,6 @@ export class UserDetails extends React.Component {
             return <h2>Uploading data</h2>
         }
 
-        return <h2>Welcome user id: {this.state.data.name}!</h2>
+        return <h2>Welcome user {this.state.data.name}!</h2>
     }
 }

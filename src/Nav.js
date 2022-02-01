@@ -27,6 +27,9 @@ export default () => (
           <Button variant="text" color="inherit" component={Link} to="/contact">
             Contact
           </Button>
+          <Button variant="text" color="inherit" component={Link} to="/gohome">
+            Go home
+          </Button>
         </Toolbar>
       </AppBar>
 )

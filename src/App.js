@@ -11,6 +11,7 @@ import Wrapper from "./Wrapper";
 import Users from "./Users";
 import {Form} from "./Form";
 import Nav from "./Nav";
+import {GoHome} from "./GoHome";
 
 const dishes = [
   { id: 1, name: 'Bigos' }, 
@@ -32,7 +33,7 @@ function App() {
           <Route path="/game" element={<Game name="Szaszki"/>} />
 
           <Route path="/users/*" element={<Users />} />
-
+          to troch
           <Route path="/users/:id" component={UserDetails} />
 
           <Route path="/form" element={<Form />} />
@@ -43,6 +44,8 @@ function App() {
               email: 'kittens@somewhere.no'
             }} />} >
           </Route>
+
+          <Route path="/gohome" element={<GoHome />} />
           
         </Routes>
       </Wrapper>

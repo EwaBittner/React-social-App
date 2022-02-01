@@ -12,7 +12,7 @@ export class UserDetails extends React.Component {
                 this.setState({
                     data: userData
                 })
-            })
+            }) 
         
     }
 

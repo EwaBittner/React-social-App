@@ -12,6 +12,7 @@ import Users from "./Users";
 import {Form} from "./Form";
 import Nav from "./Nav";
 import {GoHome} from "./GoHome";
+import Home from "./Home";
 
 const dishes = [
   { id: 1, name: 'Bigos' }, 
@@ -25,6 +26,8 @@ function App() {
       <Nav />
       <Wrapper>
         <Routes>
+          <Route path="/" component={<Home />} />
+            
           <Route path="/about-me" element={<MyFavouriteDishes dishes={dishes} />} >
             <Route path="/about-me" element={<MyName name="Ewa" surname="Bit"/>} />
             <Route path="/about-me" element={<MyName name="Ewa"/>} />

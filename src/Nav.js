@@ -9,25 +9,25 @@ export default () => (
     <AppBar position="static">
         <Toolbar>
           <CodeIcon />
-          <Button variant="text" color="inherit" component={Link} to="/">
+          <Button variant="text" color="inherit" component={Link} to="home">
             Home
           </Button>
-          <Button variant="text" color="inherit" component={Link} to="/about-me">
+          <Button variant="text" color="inherit" component={Link} to="about-me">
             About me
           </Button>
-          <Button variant="text" color="inherit" component={NavLink} to="/game" activeClassName="active">
+          <Button variant="text" color="inherit" component={NavLink} to="game" activeClassName="active">
             Game
           </Button>
-          <Button variant="text" color="inherit" component={NavLink} to="/users" activeClassName="active">
+          <Button variant="text" color="inherit" component={NavLink} to="users" activeClassName="active">
             Users
           </Button>
-          <Button variant="text" color="inherit" component={Link} to="/form">
+          <Button variant="text" color="inherit" component={Link} to="form">
             Form
           </Button>
-          <Button variant="text" color="inherit" component={Link} to="/contact">
+          <Button variant="text" color="inherit" component={Link} to="contact">
             Contact
           </Button>
-          <Button variant="text" color="inherit" component={Link} to="/gohome">
+          <Button variant="text" color="inherit" component={Link} to="gohome">
             Go home
           </Button>
         </Toolbar>

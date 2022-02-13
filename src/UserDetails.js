@@ -2,7 +2,7 @@ import React from "react";
 
 export class UserDetails extends React.Component {
     state = {
-        data: null
+        data: null 
     }
 
     componentDidMount() {

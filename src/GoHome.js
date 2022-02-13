@@ -17,7 +17,7 @@ export class GoHome extends React.Component {
         if (this.state.shouldRedirect) {
             return <Route 
                 path="*"
-                element={<Navigate to="/"/>} 
+                element={<Navigate to="home" />} 
             />
         }
 

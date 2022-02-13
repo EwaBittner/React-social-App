@@ -24,34 +24,33 @@ function App() {
   return (
     <>
       <Nav />
-      <Wrapper>
-        <Routes>
-          <Route path="/" component={<Home />} />
+        <Wrapper>
+          <Routes>
+            <Route path="home" element={<Home />} />
+              
+            <Route path="about-me" element={<MyFavouriteDishes dishes={dishes} />} >
+              <Route path="about-me" element={<MyName name="Ewa" surname="Bit"/>} />
+              <Route path="about-me" element={<MyName name="Ewa"/>} />
+            </Route>
+
+            <Route path="game" element={<Game name="Szaszki"/>} />
+
+            <Route path="users" element={<Users />} />
             
-          <Route path="/about-me" element={<MyFavouriteDishes dishes={dishes} />} >
-            <Route path="/about-me" element={<MyName name="Ewa" surname="Bit"/>} />
-            <Route path="/about-me" element={<MyName name="Ewa"/>} />
-          </Route>
+            <Route path=":id" element={UserDetails} />
 
-          <Route path="/game" element={<Game name="Szaszki"/>} />
+            <Route path="form" element={<Form />} />
 
-          <Route path="/users/*" element={<Users />} />
-          to troch
-          <Route path="/users/:id" component={UserDetails} />
+            <Route path="contact" element={<Contact data={{
+                tel: '4646345',
+                address: 'Beautiful street 13',
+                email: 'kittens@somewhere.no'
+              }} />} >
+            </Route>
 
-          <Route path="/form" element={<Form />} />
-
-          <Route path="/contact" element={<Contact data={{
-              tel: '4646345',
-              address: 'Beautiful street 13',
-              email: 'kittens@somewhere.no'
-            }} />} >
-          </Route>
-
-          <Route path="/gohome" element={<GoHome />} />
-          
-        </Routes>
-      </Wrapper>
+            <Route path="gohome" element={<GoHome />} />
+          </Routes>
+        </Wrapper>
     </>
   );
 }
